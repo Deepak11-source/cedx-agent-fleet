@@ -4,33 +4,33 @@
 
 ```mermaid
 flowchart TD
-    SEED["🗂 seed/\n(feed.json + inbox/)"]
-    INTAKE["intake/\nfeed_parser · pdf_parser · eml_parser\n→ list[RawRecord]"]
-    DEDUP["dedupe_versions()\nmarks SUPERSEDED_VERSION (Class B)"]
-    ORCH["agents/orchestrator.py\norchestrate(state, batch_amounts, pipeline_now)\n─────────────────────────\n• apply_field_aliases (SCHEMA_DRIFT)\n• MISSING_INPUT / STALE checks\n• MAD outlier detection → OUTLIER\n• injection regex → INJECTION_BLOCKED\n• NormalizedRecord built"]
-    EXQ_A["🚫 exception_queue\n(Class-A exceptions\n+ superseded)"]
-    WORKER["agents/worker.py\nworker_draft(state)\n─────────────────────────\n• model_router → haiku / sonnet\n• budget gate → BUDGET_EXCEEDED\n• REPLAY_LLM: load transcript or call API\n• low confidence → LOW_CONFIDENCE\n→ WorkerOutput"]
-    EXQ_B["🚫 exception_queue\n(BUDGET_EXCEEDED\nLOW_CONFIDENCE\nAGENT_MALFORMED)"]
-    VERIFIER["agents/verifier.py\nverify(state)\n─────────────────────────\n• structural hallucination check\n• formatted_amount value cross-check\n• independent LLM verdict (pass/fail/needs_human)\n• can OVERRULE worker → AGENT_HALLUCINATION\n→ VerifierDecision"]
-    EXQ_C["🚫 exception_queue\n(AGENT_HALLUCINATION\nAGENT_MALFORMED)"]
-    HELD["⏸ held_for_approval"]
-    GATE["core/approval.py  can_deliver()\n─────────────────────────\n① standard operator approval\n② if amount ≥ 32 000 → legal_counsel approval\nboth via approval_trail; enforced in shared core logic"]
-    DELIVER["agents/delivery.py\nassemble_package()\n→ out/package/<id>.json"]
-    AUDIT["core/audit_store.py\nappend_event() — hash-chained\n→ out/audit.json\n→ out/exception_queue.json"]
+    SEED[seed/ - feed.json + inbox/]
+    INTAKE[Intake - feed_parser / pdf_parser / eml_parser]
+    DEDUP[dedupe_versions - marks SUPERSEDED_VERSION]
+    ORCH[Orchestrator - agents/orchestrator.py<br/>apply field aliases - SCHEMA_DRIFT<br/>MISSING_INPUT / STALE / OUTLIER / INJECTION_BLOCKED<br/>builds NormalizedRecord]
+    EXQ_A[Exception Queue - Class A + superseded]
+    WORKER[Worker - agents/worker.py<br/>model router - haiku or sonnet<br/>budget gate - BUDGET_EXCEEDED<br/>LLM draft or transcript replay<br/>builds WorkerOutput]
+    EXQ_B[Exception Queue - BUDGET_EXCEEDED / LOW_CONFIDENCE / AGENT_MALFORMED]
+    VERIFIER[Verifier - agents/verifier.py<br/>structural hallucination check<br/>amount value cross-check<br/>independent LLM verdict<br/>can OVERRULE Worker]
+    EXQ_C[Exception Queue - AGENT_HALLUCINATION / AGENT_MALFORMED]
+    HELD[held for approval]
+    GATE[Approval Gate - core/approval.py<br/>standard operator approval<br/>legal_counsel approval if amount >= 32000]
+    DELIVER[Delivery - agents/delivery.py<br/>out/package/id.json]
+    AUDIT[Audit - core/audit_store.py<br/>hash-chained append-only<br/>out/audit.json + out/exception_queue.json]
 
     SEED --> INTAKE
     INTAKE --> DEDUP
-    DEDUP -- "superseded" --> EXQ_A
-    DEDUP -- "latest version" --> ORCH
-    ORCH -- "Class-A exception" --> EXQ_A
-    ORCH -- "normalized" --> WORKER
-    WORKER -- "BUDGET / LOW_CONF / MALFORMED" --> EXQ_B
-    WORKER -- "WorkerOutput" --> VERIFIER
-    VERIFIER -- "AGENT_HALLUCINATION / MALFORMED" --> EXQ_C
-    VERIFIER -- "verdict=pass" --> HELD
+    DEDUP -- superseded --> EXQ_A
+    DEDUP -- latest version --> ORCH
+    ORCH -- Class-A exception --> EXQ_A
+    ORCH -- normalized --> WORKER
+    WORKER -- BUDGET / LOW_CONF / MALFORMED --> EXQ_B
+    WORKER -- WorkerOutput --> VERIFIER
+    VERIFIER -- AGENT_HALLUCINATION / MALFORMED --> EXQ_C
+    VERIFIER -- verdict pass --> HELD
     HELD --> GATE
-    GATE -- "missing approval" --> AUDIT
-    GATE -- "all approvals present" --> DELIVER
+    GATE -- missing approval --> AUDIT
+    GATE -- approved --> DELIVER
     DELIVER --> AUDIT
     EXQ_A --> AUDIT
     EXQ_B --> AUDIT
@@ -84,7 +84,7 @@ PipelineState
 
 ## Key Design Decisions
 
-- **No LangGraph / FastAPI / Postgres** — pure Python 3.11 + Pydantic. Simpler dependency surface, easier to reason about ordering guarantees.
+- **Pure Python 3.11 + Pydantic** — no external orchestration framework. Simpler dependency surface, easier to reason about ordering guarantees.
 - **Content-addressed transcripts** — transcript files are named by `sha256(response)`, not by record ID. This makes integrity verification O(1) per file: the filename IS the hash.
 - **Shared `can_deliver()` gate** — approval enforcement lives in `core/approval.py`, not in the CLI. Every caller (CLI, probes, future API) goes through the same function.
 - **MAD outlier detection** — generalizes to any batch distribution without needing hardcoded thresholds.
