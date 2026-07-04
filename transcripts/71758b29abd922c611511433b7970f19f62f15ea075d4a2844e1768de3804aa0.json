@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:119d3d95d94a4af58b5bd3bf059425adb027a653ff1b7fa9c7ece0adb51ec17e",
+  "latency_ms": 650.0,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 REPORT Notice\", \"confidence_score\": 0.92, \"formatted_amount\": \"$4,650.00\", \"summary\": \"Report request for q.abate, due 2026-07-24.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:71758b29abd922c611511433b7970f19f62f15ea075d4a2844e1768de3804aa0",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

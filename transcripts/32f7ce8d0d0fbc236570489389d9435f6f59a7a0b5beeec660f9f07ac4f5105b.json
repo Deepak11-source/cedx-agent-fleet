@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1158.137042002636,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"New intake work request for $4,500.00 assigned to e.moreau with deadline July 28, 2026.\",\n  \"formatted_amount\": \"$4,500.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2014 Intake Processing Request\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 470,
+      "output_tokens": 101
+    }
+  },
+  "response_hash": "sha256:32f7ce8d0d0fbc236570489389d9435f6f59a7a0b5beeec660f9f07ac4f5105b",
+  "retries": 0,
+  "tokens_in": 470,
+  "tokens_out": 101
+}

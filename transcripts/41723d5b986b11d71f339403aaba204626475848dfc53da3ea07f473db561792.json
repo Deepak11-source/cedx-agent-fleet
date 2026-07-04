@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1446.9466670052498,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Onboarding work request for owner i.rossi with signed documentation package, amount $4,600.00, due 2026-07-30.\",\n  \"formatted_amount\": \"$4,600.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2013 Client Onboarding Package\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 475,
+      "output_tokens": 109
+    }
+  },
+  "response_hash": "sha256:41723d5b986b11d71f339403aaba204626475848dfc53da3ea07f473db561792",
+  "retries": 0,
+  "tokens_in": 475,
+  "tokens_out": 109
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1312.0820420008386,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Report work request for $4,650.00 owned by q.abate with final corrected figures, due 2026-07-24.\",\n  \"formatted_amount\": \"$4,650.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2014 Report Processing Request\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 471,
+      "output_tokens": 104
+    }
+  },
+  "response_hash": "sha256:641cb10dc92534336bb5331c223817c0e59e9888ca5474b382ca813b1ef696f7",
+  "retries": 0,
+  "tokens_in": 471,
+  "tokens_out": 104
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1490.8310839964543,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Quarterly review pack for $3,900.00 due by July 10, 2026, assigned to c.nguyen.\",\n  \"formatted_amount\": \"$3,900.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2013 Document Review Request\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 469,
+      "output_tokens": 101
+    }
+  },
+  "response_hash": "sha256:c20c37f0353ab781702c50446886228d4db9b13d50279ad362db080dde95c187",
+  "retries": 0,
+  "tokens_in": 469,
+  "tokens_out": 101
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:552f4e5e342d870b235998cb211cfaa6cb7cc9016ad9d1dddd049b22b9558bc6",
+  "latency_ms": 650.0,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 REPORT Notice\", \"confidence_score\": 0.92, \"formatted_amount\": \"$5,250.00\", \"summary\": \"Report request for t.novak, due 2026-08-02.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:58f15ca129a811a1aabcb3e6e62aac4b993a8ba780931fa768d0c4b931ffce64",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

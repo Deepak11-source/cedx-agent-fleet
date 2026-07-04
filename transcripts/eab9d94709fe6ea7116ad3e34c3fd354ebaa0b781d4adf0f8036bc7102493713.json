@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1145.6522079970455,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Intake processing request for $5,100.00 owned by j.cohen, due 2026-07-25.\",\n  \"formatted_amount\": \"$5,100.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2013 Intake Processing\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 467,
+      "output_tokens": 99
+    }
+  },
+  "response_hash": "sha256:eab9d94709fe6ea7116ad3e34c3fd354ebaa0b781d4adf0f8036bc7102493713",
+  "retries": 0,
+  "tokens_in": 467,
+  "tokens_out": 99
+}

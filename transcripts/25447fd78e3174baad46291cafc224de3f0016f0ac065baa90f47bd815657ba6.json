@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:5c0a69f7cb47446b61c97b857dffe9b84fb0cd1abd7009b801fd9ae8dff14c13",
+  "latency_ms": 650.0,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 REVIEW Notice\", \"confidence_score\": 0.92, \"formatted_amount\": \"$4,700.00\", \"summary\": \"Review request for g.silva, due 2026-07-22.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:25447fd78e3174baad46291cafc224de3f0016f0ac065baa90f47bd815657ba6",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1253.5384999937378,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Intake work request for j.cohen with a normalized amount of $5,100.00, due 2026-07-25.\",\n  \"formatted_amount\": \"$5,100.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2013 Intake Processing\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 467,
+      "output_tokens": 101
+    }
+  },
+  "response_hash": "sha256:d3723e7f8c3b3d42b796c58da0004d328b17b47d380ff6c4eaaa0479e57f2599",
+  "retries": 0,
+  "tokens_in": 467,
+  "tokens_out": 101
+}

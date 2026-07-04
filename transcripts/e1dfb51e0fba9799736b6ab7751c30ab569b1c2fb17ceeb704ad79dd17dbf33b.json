@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1533.7850409996463,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Financial report processing work request owned by v.serrano for $5,300.00 due July 29, 2026.\",\n  \"formatted_amount\": \"$5,300.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2014 Report Processing Request\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 479,
+      "output_tokens": 100
+    }
+  },
+  "response_hash": "sha256:e1dfb51e0fba9799736b6ab7751c30ab569b1c2fb17ceeb704ad79dd17dbf33b",
+  "retries": 0,
+  "tokens_in": 479,
+  "tokens_out": 100
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 2179.141749998962,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Routine financial report for $5,000.00 owned by h.iqbal with deadline 2026-08-05.\",\n  \"formatted_amount\": \"$5,000.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2014 Report Request\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 469,
+      "output_tokens": 100
+    }
+  },
+  "response_hash": "sha256:f051723209ee41926aacce8acfced7fd5fc223e62034e2522c788edd73bdfd0a",
+  "retries": 0,
+  "tokens_in": 469,
+  "tokens_out": 100
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:53315b539289005debc51ce949ea5add36b8cd906e206d03bbf6ed300124a6e6",
+  "latency_ms": 650.0,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 REPORT Notice\", \"confidence_score\": 0.92, \"formatted_amount\": \"$5,000.00\", \"summary\": \"Report request for h.iqbal, due 2026-08-05.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:70454d2467639418fda3149af601a0eaa5d9a5b9b521e22fbbf9daa07400fe67",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

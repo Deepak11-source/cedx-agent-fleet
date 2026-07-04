@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:40d746f1d59fcf5e4c5cb74a6ec9c5f3bb4c86a27730aa945a49f474c4cff71b",
+  "latency_ms": 650.0,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 ONBOARDING Notice\", \"confidence_score\": 0.92, \"formatted_amount\": \"$4,800.00\", \"summary\": \"Onboarding request for a.shah, due 2026-07-15.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:e012117b5f841cd64bbfd074efca7d2191415421dc0192805a110b4b8404a148",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

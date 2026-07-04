@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 3098.0055000036373,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.45,\n  \"summary\": \"Intake work request for $5,000.00 due 2026-07-26, owned by o.varga; notes indicate possible category mismatch and internal data inconsistency.\",\n  \"formatted_amount\": \"$5,000.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2013 Client Intake Processing\"\n}\n```\n\n**Confidence rationale:** The normalized record fields are clear and internally consistent (id, owner, deadline, category, amount), but the `notes` field flags a material discrepancy: the category is marked `INTAKE`, yet the notes describe renewal and reporting elements with inconsistent figures. This suggests either a categorization error or incomplete data reconciliation upstream. I have used only the structured `category` and `amount` fields per the ground-truth rule, but the low confidence reflects the unresolved ambiguity documented in notes.",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 481,
+      "output_tokens": 227
+    }
+  },
+  "response_hash": "sha256:16b14b4e8f01de6c1728b0f79ca73bd76953d8d66c03aec6c15c35de16ee1df4",
+  "retries": 0,
+  "tokens_in": 481,
+  "tokens_out": 227
+}

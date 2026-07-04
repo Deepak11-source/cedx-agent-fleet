@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:ee70633d9c6bb9e38ba19f83eb1b581f101965420f075c05af16d9bbbac56b8c",
+  "latency_ms": 650.0,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 INTAKE Notice\", \"confidence_score\": 0.68, \"formatted_amount\": \"$5,000.00\", \"summary\": \"Intake request for o.varga, due 2026-07-26.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:af0372c716aac65348ca9f767bb8dcc96406e6b7c234e8ce9e326bc80b6f5008",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

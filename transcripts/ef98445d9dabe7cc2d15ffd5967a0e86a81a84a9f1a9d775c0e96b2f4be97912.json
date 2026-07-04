@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1234.185332999914,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Routine financial report for $5,000.00 due by August 5, 2026, assigned to h.iqbal.\",\n  \"formatted_amount\": \"$5,000.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2014 Report Processing\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 469,
+      "output_tokens": 101
+    }
+  },
+  "response_hash": "sha256:ef98445d9dabe7cc2d15ffd5967a0e86a81a84a9f1a9d775c0e96b2f4be97912",
+  "retries": 0,
+  "tokens_in": 469,
+  "tokens_out": 101
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1653.3430829949793,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Report work request for q.abate with corrected figures, due 2026-07-24, amount $4,650.00.\",\n  \"formatted_amount\": \"$4,650.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2014 Report Processing\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 471,
+      "output_tokens": 101
+    }
+  },
+  "response_hash": "sha256:a64bd9ddaa67ac3ce3ceda50290f57f420d320175fdd0c17f755b730a2682f6d",
+  "retries": 0,
+  "tokens_in": 471,
+  "tokens_out": 101
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1128.6215419968357,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Onboarding work request for $4,850.00 owned by s.haque, due 2026-07-27.\",\n  \"formatted_amount\": \"$4,850.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2013 Client Onboarding Package\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 473,
+      "output_tokens": 105
+    }
+  },
+  "response_hash": "sha256:7852b72e34aac6b01c0144969abbabb9083c19aa5f38b44bb5553e46e7790ec0",
+  "retries": 0,
+  "tokens_in": 473,
+  "tokens_out": 105
+}

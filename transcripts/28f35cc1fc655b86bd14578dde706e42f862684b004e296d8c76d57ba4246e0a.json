@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1116.1272499957704,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Renewal request for $4,750.00 owned by p.larsen, due 2026-07-23, sourced from partner feed.\",\n  \"formatted_amount\": \"$4,750.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2014 Renewal Request\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 470,
+      "output_tokens": 105
+    }
+  },
+  "response_hash": "sha256:28f35cc1fc655b86bd14578dde706e42f862684b004e296d8c76d57ba4246e0a",
+  "retries": 0,
+  "tokens_in": 470,
+  "tokens_out": 105
+}

@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": null,
+  "latency_ms": 1236.9241249980405,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "```json\n{\n  \"confidence_score\": 0.95,\n  \"summary\": \"Renewal work request for f.haddad with a minor scope expansion, amount $5,300.00, due 2026-07-18.\",\n  \"formatted_amount\": \"$5,300.00\",\n  \"urgency_label\": \"normal\",\n  \"branded_header\": \"CEDX Financial Services \u2013 Renewal Request\"\n}\n```",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 472,
+      "output_tokens": 105
+    }
+  },
+  "response_hash": "sha256:72bbdd925829c3919d52af8f36c57a33aa5b16e62fe63a99f1f078352a3653ab",
+  "retries": 0,
+  "tokens_in": 472,
+  "tokens_out": 105
+}

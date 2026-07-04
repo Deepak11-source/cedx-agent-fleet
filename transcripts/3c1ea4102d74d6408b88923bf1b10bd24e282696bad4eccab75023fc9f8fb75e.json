@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:b8c6734ac068fa09d06be4ccf2a5c73accffd788ce4fbcc9a773b1c44c8174d9",
+  "latency_ms": 650.0,
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 RENEWAL Notice\", \"confidence_score\": 0.92, \"formatted_amount\": \"$4,750.00\", \"summary\": \"Renewal request for p.larsen, due 2026-07-23.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:3c1ea4102d74d6408b88923bf1b10bd24e282696bad4eccab75023fc9f8fb75e",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

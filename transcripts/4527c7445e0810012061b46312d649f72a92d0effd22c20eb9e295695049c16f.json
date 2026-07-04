@@ -1,0 +1,23 @@
+{
+  "agent": "worker",
+  "delivered_fields_hash": "sha256:c785c3ee38b24f43a31c3c24350ddca9f199299892978f4b18b8488b6d0e5721",
+  "latency_ms": 650.0,
+  "model": "claude-sonnet-4-6",
+  "prompt_version": "worker_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"branded_header\": \"CEDX Financial Services \\u2014 ? Notice\", \"confidence_score\": 0.35, \"formatted_amount\": \"$5,100.00\", \"summary\": \"? request for u.delgado, due 2026-07-26.\", \"urgency_label\": \"normal\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 320,
+      "output_tokens": 140
+    }
+  },
+  "response_hash": "sha256:4527c7445e0810012061b46312d649f72a92d0effd22c20eb9e295695049c16f",
+  "retries": 0,
+  "tokens_in": 320,
+  "tokens_out": 140
+}

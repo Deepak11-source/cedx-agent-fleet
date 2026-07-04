@@ -1,0 +1,23 @@
+{
+  "agent": "verifier",
+  "delivered_fields_hash": null,
+  "latency_ms": 900.0,
+  "model": "claude-sonnet-4-6",
+  "prompt_version": "verifier_v1",
+  "response": {
+    "content": [
+      {
+        "text": "{\"reasoning\": \"Formatted amount matches source; summary consistent with category and notes.\", \"verdict\": \"pass\"}",
+        "type": "text"
+      }
+    ],
+    "usage": {
+      "input_tokens": 220,
+      "output_tokens": 60
+    }
+  },
+  "response_hash": "sha256:9a86bb8888b7856ff723b490f1098342dc7ab5fc0ec5912214c787d1274b4afa",
+  "retries": 0,
+  "tokens_in": 220,
+  "tokens_out": 60
+}
