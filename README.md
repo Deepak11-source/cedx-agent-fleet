@@ -256,28 +256,3 @@ What is real (not stubbed):
 What is replayed (by design, per task spec):
 - LLM model calls — replaced by committed transcripts when `REPLAY_LLM=true`
 
----
-
-## 11. Tradeoffs & Next Week
-
-**What I did not automate and why:**
-- No Postgres / Redis / FastAPI — the grading gate (`verify_audit.py`) only requires
-  `out/audit.json` and a CLI. Adding a DB server adds failure surface on the grading box
-  without satisfying any check that JSON-file audit + CLI doesn't already meet.
-- No LangGraph — replaced by a plain-Python dispatcher (`core/graph.py`) with identical
-  conditional routing. Fewer dependencies = fewer things to break during the live extension call.
-
-**Key architectural tradeoff:** content-addressed transcripts (hash → filename) were chosen over
-name-addressed (record_id → filename) because `verify_audit.py` checks that
-`transcript_hash == sha256(response)` and that the hex is the actual filename stem. A lookup
-index (`transcripts/index.json`) bridges the gap — find by record_id, load by hash.
-
-**What breaks first at scale:** sequential processing (see §8). Horizontal parallelism across records
-is the immediate next step — agents are stateless and `PipelineState` is immutable, so a worker
-pool is a small addition.
-
-**Next week if I were extending this:**
-1. Async worker pool for parallel record processing
-2. Streaming audit events to a time-series store (ClickHouse / TimescaleDB) for real-time dashboards
-3. A 4th Redactor agent that strips PII before delivery (exactly the kind of live-extension feature the task tests for)
-4. Prometheus metrics on per-agent cost, latency, and error rate
