@@ -7,3 +7,15 @@ out/*
 *.egg-info/
 .DS_Store
 ._*
+
+# Kit reference docs — not for submission
+CLAUDE.md
+TASK.md
+IMPLEMENTATION.md
+PREREQUISITES.md
+PROJECT_OVERVIEW.md
+README_KIT.md
+SCOPE.template.md
+STRATEGY.md
+docs/
+.claude/
