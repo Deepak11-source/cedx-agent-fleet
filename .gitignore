@@ -2,7 +2,8 @@
 __pycache__/
 *.pyc
 out/*
-!out/.gitkeep
+.superpowers/
+.pytest_cache/
 .venv/
 *.egg-info/
 .DS_Store
